@@ -1,15 +1,10 @@
-import React from "react";
-import DashboardNavBar from "../dashboardNavBar";
-import DashboardMenuTitle from "../dashboardTitleMenu";
 import FormInputs from "../formInputs";
 import userIcon from "../../assets/icons/Icons (2).png";
 import userIcon1 from "../../assets/icons/Icons.png";
 import FormButton from "../formButton";
-const CreateUser = () => {
+const CreateUserForm = () => {
   return (
     <>
-      <DashboardMenuTitle />
-      <DashboardNavBar />
       <form>
         <FormInputs
           type="text"
@@ -49,5 +44,4 @@ const CreateUser = () => {
     </>
   );
 };
-
-export default CreateUser;
+export default CreateUserForm;
