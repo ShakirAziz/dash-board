@@ -1,0 +1,14 @@
+.navLinks {
+  background-color: #222338;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  margin-bottom: 2rem;
+}
+.navLink {
+  list-style-type: none;
+  cursor: pointer;
+}
