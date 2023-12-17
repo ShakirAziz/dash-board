@@ -12,3 +12,9 @@
   list-style-type: none;
   cursor: pointer;
 }
+.activeNvaLink {
+  text-decoration: underline;
+  color: #16b0e9;
+  list-style-type: none;
+  cursor: pointer;
+}
