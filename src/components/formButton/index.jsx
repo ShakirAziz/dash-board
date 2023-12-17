@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormButton = () => {
+const FormButton = ({button}) => {
   return (
     <>
       <input
@@ -14,7 +14,7 @@ const FormButton = () => {
           cursor: "pointer",
         }}
         type="submit"
-        value="Add New User"
+        value={button}
       />
     </>
   );
