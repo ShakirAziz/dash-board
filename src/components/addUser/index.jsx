@@ -11,10 +11,10 @@ const AddUser = () => {
     <>
       <DashboardMenuTitle />
       <DashboardNavBar actionTab={actionTab} setActionTab={setActionTab} />
-      {actionTab === 1 && <CreateUserForm />}
-      {actionTab === 2 && <UpdateUserForm />}
-      {actionTab === 3 && <DeleteUserForm />}
-      {actionTab === 4 && <SearchUserForm />}
+      {actionTab === 1 && [<CreateUserForm />]}
+      {actionTab === 2 && [<UpdateUserForm />]}
+      {actionTab === 3 && [<DeleteUserForm />]}
+      {actionTab === 4 && [<SearchUserForm />]}
     </>
   );
 };
