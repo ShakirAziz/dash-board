@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/button.jsx";
+
 import "../button/button.css";
 import "./login.css";
 import InputComponent from "../input/input";
@@ -16,6 +17,7 @@ function LoginComponent() {
           inputId="inputOne"
           placeholder="email address"
         />
+
         <InputComponent type="text" inputId="inputTwo" placeholder="password" />
         <div className="forgotPass">
           <div className="checkboxStyle">
