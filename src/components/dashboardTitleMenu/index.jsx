@@ -1,6 +1,11 @@
 import React from "react";
 import adimAvatar from "../../assets/Ellipse 1094.png";
-const DashboardMenuTitle = () => {
+
+const DashboardMenuTitle = ({ titlesAndDescriptions, actionTab }) => {
+  const selectedTabData = titlesAndDescriptions.find(
+    (item) => item.id === actionTab
+  );
+
   return (
     <div
       style={{
@@ -11,12 +16,20 @@ const DashboardMenuTitle = () => {
       }}
     >
       <div>
-        <h1 style={{ color: "#009D92", fontSize: "2.5rem", fontWeight: "900" }}>
-          Add new user
-        </h1>
-        <p style={{ color: "white" }}>
-          Create a brand new user and add them to this site.
-        </p>
+        {selectedTabData && (
+          <>
+            <h1
+              style={{
+                color: "#009D92",
+                fontSize: "2.5rem",
+                fontWeight: "900",
+              }}
+            >
+              {selectedTabData.title}
+            </h1>
+            <p style={{ color: "white" }}>{selectedTabData.description}</p>
+          </>
+        )}
       </div>
       <div style={{ alignSelf: "end" }}>
         <img src={adimAvatar} alt="adimAvatar" />
