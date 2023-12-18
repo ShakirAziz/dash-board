@@ -1,9 +1,5 @@
 const DeleteUserForm = () => {
-  return (
-    <>
-      <h1 style={{ color: "white" }}>Here add delete user Form</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default DeleteUserForm;
