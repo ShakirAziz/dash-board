@@ -1,6 +1,6 @@
 import "./styles.css";
 const DashboardNavBar = ({ actionTab, setActionTab }) => {
-  const handleClick = index => {
+  const handleClick = (index) => {
     setActionTab(index);
   };
 
