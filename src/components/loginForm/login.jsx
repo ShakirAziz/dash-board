@@ -3,6 +3,8 @@ import Button from "../button/button.jsx";
 import "../button/button.css";
 import "./login.css";
 import InputComponent from "../input/input";
+import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlineLockClosed } from "react-icons/hi";
 
 function LoginComponent() {
   return (
@@ -11,12 +13,24 @@ function LoginComponent() {
         <p>Login</p>
       </div>
       <div>
-        <InputComponent
-          type="text"
-          inputId="inputOne"
-          placeholder="email address"
-        />
-        <InputComponent type="text" inputId="inputTwo" placeholder="password" />
+        <div className="inputStyDiv">
+          <InputComponent
+            type="text"
+            inputId="inputOne"
+            placeholder="email address"
+            icon={<HiOutlineMail />}
+            iconStyle="iconSty"
+          />
+        </div>
+        <div className="inputStyDiv">
+          <InputComponent
+            icon={<HiOutlineLockClosed />}
+            type="text"
+            inputId="inputTwo"
+            placeholder="password"
+            iconStyle="iconSty"
+          />
+        </div>
         <div className="forgotPass">
           <div className="checkboxStyle">
             <input type="checkbox" id="check" />

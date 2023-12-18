@@ -69,3 +69,12 @@
 .signup {
   color: #009d92;
 }
+.inputStyDiv {
+  position: relative;
+}
+
+.iconSty {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
