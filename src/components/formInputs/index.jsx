@@ -24,7 +24,7 @@ const FormInputs = ({ type, value, id, name, placeholder, max, iconUrl }) => {
       <div
         style={{
           fontSize: "1.5rem",
-          color: "white",
+
           position: "absolute",
           color: "grey",
           left: "1rem",

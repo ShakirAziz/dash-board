@@ -27,7 +27,6 @@ const CreateUserForm = () => {
           id="3"
           placeholder="User Gmail"
           iconUrl={<MdOutlineMail />}
-          iconAlt="user Mail"
         />
         <FormInputs
           type="password"
