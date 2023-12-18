@@ -1,9 +1,9 @@
-import ellipse from "../../assets/Ellipse 1094.png";
 import "../input/input.css";
 import "./delete.css";
 import { LuSearch } from "react-icons/lu";
 import FormInputs from "../formInputs";
-import userDataAccess from "./index";
+import userDataAccess from "./userData";
+
 const DeleteUserForm = () => {
   return (
     <>
@@ -21,18 +21,24 @@ const DeleteUserForm = () => {
           <th>Email</th>
           <th>Action</th>
         </tr>
-        <tr className="tableRow">
-          <td>
-            <img src={ellipse} alt="alia" />
-          </td>
-          <td>name of p</td>
-          <td>
-            <button>click for details</button>
-          </td>
-          <td>
-            <button>dfdsfs</button>
-          </td>
-        </tr>
+        <>
+          {userDataAccess.map((value) => {
+            return (
+              <tr className="tableRow">
+                <td>
+                  <img src={value.image} alt="alia" />
+                </td>
+                <td>{value.name}</td>
+                <td>
+                  <button>{value.link}</button>
+                </td>
+                <td>
+                  <button>{value.buttonImg}</button>
+                </td>
+              </tr>
+            );
+          })}
+        </>
       </table>
     </>
   );
