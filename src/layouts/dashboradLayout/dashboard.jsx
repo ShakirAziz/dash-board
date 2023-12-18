@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardSideBar from "../../components/dashboardSideBar";
 import DashboardMainLayout from "../../components/dashboardLayout";
-import { useState } from "react";
 import PatientManagment from "../../components/pateintManagement";
 import ClinicalManagment from "../../components/clinicalManagment";
+
 const Dashboard = () => {
   const [toggleState, setToggleState] = useState(1);
+
+  const contentComponents = [
+    null, // Index 0 is reserved
+    <DashboardMainLayout key={1} />,
+    <PatientManagment key={2} />,
+    <ClinicalManagment key={3} />,
+    // Add more components as needed
+  ];
+
   return (
     <div style={{ display: "flex" }}>
       <DashboardSideBar
         toggleState={toggleState}
         setToggleState={setToggleState}
       />
-      {toggleState === 1 ? <DashboardMainLayout /> : null}
-      {toggleState === 2 ? <PatientManagment /> : null}
-      {toggleState === 3 ? <ClinicalManagment /> : null}
+      {contentComponents[toggleState]}
     </div>
   );
 };

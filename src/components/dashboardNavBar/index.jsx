@@ -1,38 +1,21 @@
 import "./styles.css";
-const DashboardNavBar = ({ actionTab, setActionTab }) => {
+const DashboardNavBar = ({ tabs, actionTab, onTabChange }) => {
   const handleClick = (index) => {
-    setActionTab(index);
+    onTabChange(index);
   };
 
   return (
-    <>
-      <ul className="navLinks">
+    <ul className="navLinks">
+      {tabs.map((tab) => (
         <li
-          className={actionTab === 1 ? "activeNvaLink" : "navLink"}
-          onClick={() => handleClick(1)}
+          key={tab.id}
+          className={actionTab === tab.id ? "activeNvaLink" : "navLink"}
+          onClick={() => handleClick(tab.id)}
         >
-          create user
+          {tab.label}
         </li>
-        <li
-          className={actionTab === 2 ? "activeNvaLink" : "navLink"}
-          onClick={() => handleClick(2)}
-        >
-          update user
-        </li>
-        <li
-          className={actionTab === 3 ? "activeNvaLink" : "navLink"}
-          onClick={() => handleClick(3)}
-        >
-          delete user
-        </li>
-        <li
-          className={actionTab === 4 ? "activeNvaLink" : "navLink"}
-          onClick={() => handleClick(4)}
-        >
-          search user
-        </li>
-      </ul>
-    </>
+      ))}
+    </ul>
   );
 };
 

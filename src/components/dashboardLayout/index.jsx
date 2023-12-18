@@ -1,6 +1,7 @@
 import React from "react";
-import "./styles.css";
 import AddUser from "../addUser";
+import "./styles.css";
+
 const DashboardMainLayout = () => {
   return (
     <div className="mainContainer">
