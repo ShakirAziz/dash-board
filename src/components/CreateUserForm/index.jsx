@@ -1,6 +1,7 @@
 import FormInputs from "../formInputs";
-import userIcon from "../../assets/icons/Icons (2).png";
-import userIcon1 from "../../assets/icons/Icons.png";
+import { MdOutlineMail } from "react-icons/md";
+import { CiLock } from "react-icons/ci";
+import { LuUser2 } from "react-icons/lu";
 import FormButton from "../formButton";
 const CreateUserForm = () => {
   return (
@@ -10,24 +11,22 @@ const CreateUserForm = () => {
           type="text"
           name="firstname"
           id="1"
-          placeholder="First Name"
-          iconUrl={userIcon}
-          iconAlt="user first name"
+          placeholder="use name (required)"
+          iconUrl={<LuUser2 />}
         />
         <FormInputs
           type="text"
           name="lastname"
           id="2"
           placeholder="Last Name"
-          iconUrl={userIcon}
-          iconAlt="user last name"
+          iconUrl={<LuUser2 />}
         />
         <FormInputs
           type="email"
           name="gmail"
           id="3"
           placeholder="User Gmail"
-          iconUrl={userIcon}
+          iconUrl={<MdOutlineMail />}
           iconAlt="user Mail"
         />
         <FormInputs
@@ -35,7 +34,7 @@ const CreateUserForm = () => {
           name="userpassword"
           id="4"
           placeholder="User Password"
-          iconUrl={userIcon1}
+          iconUrl={<CiLock />}
           iconAlt="user password"
           max="16"
         />

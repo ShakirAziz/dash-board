@@ -4,7 +4,6 @@ import { CiGrid41 } from "react-icons/ci";
 import { FaUserInjured } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
 const DashboardSideBar = ({ toggleState, setToggleState }) => {
-  // const [toggleState, setToggleState] = useState(1);
   const toggleTab = index => {
     setToggleState(index);
   };

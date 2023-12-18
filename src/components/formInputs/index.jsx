@@ -1,15 +1,6 @@
 import React from "react";
 
-const FormInputs = ({
-  type,
-  value,
-  id,
-  name,
-  placeholder,
-  max,
-  iconUrl,
-  iconAlt,
-}) => {
+const FormInputs = ({ type, value, id, name, placeholder, max, iconUrl }) => {
   return (
     <div style={{ position: "relative" }}>
       <input
@@ -29,17 +20,19 @@ const FormInputs = ({
         placeholder={placeholder}
         maxLength={max}
       />
-      <img
+
+      <div
         style={{
-          position: "absolute",
+          fontSize: "1.5rem",
           color: "white",
-          left: "0.5rem",
-          top: "0.4rem",
-          width: "2.1rem",
+          position: "absolute",
+          color: "grey",
+          left: "1rem",
+          top: "0.7rem",
         }}
-        src={iconUrl}
-        alt={iconAlt}
-      />
+      >
+        {iconUrl}
+      </div>
     </div>
   );
 };
