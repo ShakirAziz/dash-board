@@ -1,11 +1,27 @@
 import React from "react";
 import "./input.css";
 
-function InputComponent({ type, inputId, placeholder, icons }) {
+function InputComponent({
+  type,
+  inputId,
+  placeholder,
+  icon,
+  iconStyle,
+  value,
+  handleChange,
+  name,
+}) {
   return (
-    <div>
-      <input type={type} id={inputId} placeholder={placeholder} />
-      {icons}
+    <div className="input-container">
+      <input
+        type={type}
+        id={inputId}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+        name={name}
+      />
+      <div className={iconStyle}> {icon}</div>
     </div>
   );
 }
