@@ -1,12 +1,15 @@
 import DyanimContent from "../dynamicDashboardContent";
-import { titlesAndDescriptions, tabs } from "../addUser/addUser";
+import {
+  clinicalManTabs,
+  clinicalTitlesAndDesc,
+} from "../clinicalManagment/clinicalMan";
 import "./style.css";
 const ClinicalManagment = () => {
   return (
     <>
       <DyanimContent
-        titlesAndDescriptions={titlesAndDescriptions}
-        tabs={tabs}
+        titlesAndDescriptions={clinicalTitlesAndDesc}
+        tabs={clinicalManTabs}
       />
     </>
   );
