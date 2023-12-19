@@ -1,6 +1,6 @@
 .login-div {
   background-color: white;
-  height: 98%;
+  height: 98vh;
   width: 32rem;
   grid-column: 5/6;
   display: grid;

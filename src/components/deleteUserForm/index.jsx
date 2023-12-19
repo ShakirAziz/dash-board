@@ -3,10 +3,11 @@ import "./delete.css";
 import { LuSearch } from "react-icons/lu";
 import FormInputs from "../formInputs";
 import userDataAccess from "./userData";
+import InnerHeader from "../InnerHeader";
 
 const DeleteUserForm = () => {
   return (
-    <>
+    <div className="padDivSty">
       <FormInputs
         type="search"
         name="searchUser"
@@ -14,33 +15,33 @@ const DeleteUserForm = () => {
         placeholder="search user"
         iconUrl={<LuSearch />}
       />
-      <table className="deleteTab">
-        <tr>
-          <th>pic</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Action</th>
-        </tr>
-        <>
-          {userDataAccess.map((value) => {
-            return (
-              <tr className="tableRow">
-                <td>
-                  <img src={value.image} alt="alia" />
-                </td>
-                <td>{value.name}</td>
-                <td>
-                  <button>{value.link}</button>
-                </td>
-                <td>
-                  <button>{value.buttonImg}</button>
-                </td>
-              </tr>
-            );
-          })}
-        </>
-      </table>
-    </>
+      <InnerHeader
+        picture="PICTURE"
+        name="NAME"
+        email="EMAIL"
+        action="ACTION"
+      />
+      <>
+        {userDataAccess.map((value) => {
+          return (
+            <ul className="listData">
+              <li className="firstSty">
+                <img src={value.image} alt="alia" />
+              </li>
+              <li>{value.name}</li>
+              <li>
+                <button className="detailsBtn">{value.link}</button>
+              </li>
+              <li>
+                <button className="deleteBtn">
+                  <img src={value.buttonImg} alt="delete" />
+                </button>
+              </li>
+            </ul>
+          );
+        })}
+      </>
+    </div>
   );
 };
 

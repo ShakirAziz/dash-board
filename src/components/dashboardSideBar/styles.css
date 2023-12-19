@@ -2,7 +2,7 @@
   background-color: #222338;
   color: white;
   width: 19rem;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
