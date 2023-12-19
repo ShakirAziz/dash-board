@@ -20,17 +20,5 @@ const userDataAccess = [
     link: "click for details",
     buttonImg: del,
   },
-  {
-    image: avatarImg,
-    name: "Floyd Miles",
-    link: "click for details",
-    buttonImg: del,
-  },
-  {
-    image: avatarImg,
-    name: "Kathryn Murphy",
-    link: "click for details",
-    buttonImg: del,
-  },
 ];
 export default userDataAccess;

@@ -16,10 +16,10 @@ const DeleteUserForm = () => {
         iconUrl={<LuSearch />}
       />
       <InnerHeader
-        picture="PICTURE"
-        name="NAME"
-        email="EMAIL"
-        action="ACTION"
+        picture="Picture"
+        name="Name"
+        email="Email"
+        action="Action"
       />
       <>
         {userDataAccess.map((value) => {
