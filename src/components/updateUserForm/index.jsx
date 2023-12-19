@@ -26,28 +26,28 @@ const UpdateUserForm = () => {
           type="text"
           name="first name"
           id="3"
-          placeholder="first Name(to be update)"
+          placeholder="first Name (to be update)"
           iconUrl={<LuUser2 />}
         />
         <FormInputs
           type="text"
           name="last name"
           id="4"
-          placeholder="last Name(to be update)"
+          placeholder="last Name (to be update)"
           iconUrl={<LuUser2 />}
         />
         <FormInputs
           type="password"
           name="New password"
           id="5"
-          placeholder="New password(to be update)"
+          placeholder="New password (to be update)"
           iconUrl={<CiLock />}
         />
         <FormInputs
           type="password"
           name="Confirm password"
           id="6"
-          placeholder="Confirm password(to be update)"
+          placeholder="Confirm password (to be update)"
           iconUrl={<CiLock />}
         />
         <FormButton button="Update" />
