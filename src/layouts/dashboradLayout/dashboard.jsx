@@ -21,7 +21,17 @@ const Dashboard = () => {
         toggleState={toggleState}
         setToggleState={setToggleState}
       />
-      {contentComponents[toggleState]}
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          backgroundColor: " #000000",
+          padding: "1rem 2rem",
+          color: "white",
+        }}
+      >
+        {contentComponents[toggleState]}
+      </div>
     </div>
   );
 };
