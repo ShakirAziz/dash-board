@@ -6,7 +6,7 @@ import userDataAccess from "./userData";
 
 const DeleteUserForm = () => {
   return (
-    <>
+    <div className="padDivSty">
       <FormInputs
         type="search"
         name="searchUser"
@@ -14,33 +14,33 @@ const DeleteUserForm = () => {
         placeholder="search user"
         iconUrl={<LuSearch />}
       />
-      <table className="deleteTab">
-        <tr>
-          <th>pic</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Action</th>
-        </tr>
-        <>
-          {userDataAccess.map((value) => {
-            return (
-              <tr className="tableRow">
-                <td>
-                  <img src={value.image} alt="alia" />
-                </td>
-                <td>{value.name}</td>
-                <td>
-                  <button>{value.link}</button>
-                </td>
-                <td>
-                  <button>{value.buttonImg}</button>
-                </td>
-              </tr>
-            );
-          })}
-        </>
-      </table>
-    </>
+      <ul className="delList">
+        <li>PICTURE</li>
+        <li>NAME</li>
+        <li>EMAIL</li>
+        <li>ACTION</li>
+      </ul>
+      <>
+        {userDataAccess.map((value) => {
+          return (
+            <ul className="listData">
+              <li>
+                <img src={value.image} alt="alia" />
+              </li>
+              <li>{value.name}</li>
+              <li>
+                <button className="detailsBtn">{value.link}</button>
+              </li>
+              <li>
+                <button className="deleteBtn">
+                  <img src={value.buttonImg} alt="delete" />
+                </button>
+              </li>
+            </ul>
+          );
+        })}
+      </>
+    </div>
   );
 };
 
