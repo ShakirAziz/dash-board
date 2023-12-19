@@ -2,13 +2,11 @@
 import CreateUserForm from "../CreateUserForm";
 import UpdateUserForm from "../updateUserForm";
 import DeleteUserForm from "../deleteUserForm";
-import SearchUserForm from "../serachuserForm";
 
 export const tabs = [
-  { id: 1, label: "create user", component: <CreateUserForm /> },
-  { id: 2, label: "update user", component: <UpdateUserForm /> },
-  { id: 3, label: "delete user", component: <DeleteUserForm /> },
-  { id: 4, label: "search user", component: <SearchUserForm /> },
+  { id: 1, label: "Add Staff", component: <CreateUserForm /> },
+  { id: 2, label: "update staff info ", component: <UpdateUserForm /> },
+  { id: 3, label: "staff's list", component: <DeleteUserForm /> },
 ];
 
 // titlesAndDescriptions.js

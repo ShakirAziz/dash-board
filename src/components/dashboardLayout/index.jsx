@@ -4,9 +4,9 @@ import "./styles.css";
 
 const DashboardMainLayout = () => {
   return (
-    <div className="mainContainer">
+    <>
       <AddUser />
-    </div>
+    </>
   );
 };
 
