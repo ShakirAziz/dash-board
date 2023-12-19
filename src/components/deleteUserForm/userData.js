@@ -1,24 +1,36 @@
 import avatarImg from "../../assets/Ellipse 1094.png";
-import { RiDeleteBin6Fill } from "react-icons/ri";
+import del from "../../assets/deleteIcon.png";
 
 const userDataAccess = [
   {
     image: avatarImg,
-    name: "avatar",
-    link: "clickfordetails",
-    buttonImg: <RiDeleteBin6Fill />,
+    name: "Darrell Steward",
+    link: "click for details",
+    buttonImg: del,
   },
   {
     image: avatarImg,
-    name: "avatar",
-    link: "clickfordetails",
-    buttonImg: <RiDeleteBin6Fill />,
+    name: "Courtney Henry",
+    link: "click for details",
+    buttonImg: del,
   },
   {
     image: avatarImg,
-    name: "avatar",
-    link: "clickfordetails",
-    buttonImg: <RiDeleteBin6Fill />,
+    name: "Kathryn Murphy",
+    link: "click for details",
+    buttonImg: del,
+  },
+  {
+    image: avatarImg,
+    name: "Floyd Miles",
+    link: "click for details",
+    buttonImg: del,
+  },
+  {
+    image: avatarImg,
+    name: "Kathryn Murphy",
+    link: "click for details",
+    buttonImg: del,
   },
 ];
 export default userDataAccess;
