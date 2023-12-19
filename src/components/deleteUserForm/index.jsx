@@ -3,6 +3,7 @@ import "./delete.css";
 import { LuSearch } from "react-icons/lu";
 import FormInputs from "../formInputs";
 import userDataAccess from "./userData";
+import InnerHeader from "../InnerHeader";
 
 const DeleteUserForm = () => {
   return (
@@ -14,17 +15,17 @@ const DeleteUserForm = () => {
         placeholder="search user"
         iconUrl={<LuSearch />}
       />
-      <ul className="delList">
-        <li>PICTURE</li>
-        <li>NAME</li>
-        <li>EMAIL</li>
-        <li>ACTION</li>
-      </ul>
+      <InnerHeader
+        picture="PICTURE"
+        name="NAME"
+        email="EMAIL"
+        action="ACTION"
+      />
       <>
         {userDataAccess.map((value) => {
           return (
             <ul className="listData">
-              <li>
+              <li className="firstSty">
                 <img src={value.image} alt="alia" />
               </li>
               <li>{value.name}</li>
