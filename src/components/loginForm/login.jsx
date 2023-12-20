@@ -5,32 +5,52 @@ import InputComponent from "../input/input";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { LoginSchema } from "../../schemas/Login";
 
+const initialValues = {
+  email: "",
+  password: "",
+};
 function LoginComponent() {
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
-  const user = { eamil: "shakir", password: "1234" };
+  const user = { eamil: "shakir@gmail.com", password: "12345678" };
   const navigate = useNavigate();
-  const handleChange = e => {
-    const InputValue = e.target.value;
-    const name = e.target.name;
-    setData(preValue => {
-      return {
-        ...preValue,
-        [name]: InputValue,
-      };
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      enableReinitialize: true,
+      validationSchema: LoginSchema,
+      initialValues: initialValues,
+      onSubmit: (values, action) => {
+        if (values.email === user.eamil && values.password === user.password) {
+          navigate("/dashboard");
+        }
+        action.resetForm();
+      },
     });
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (data.email === user.eamil && data.password === user.password) {
-      navigate("/dashboard");
-    } else {
-      alert("Please check email and password");
-    }
-  };
+
+  // const [data, setData] = useState({
+  // email: "",
+  // password: "",
+  // });
+
+  // const handleChange = e => {
+  //   const InputValue = e.target.value;
+  //   const name = e.target.name;
+  //   setData(preValue => {
+  //     return {
+  //       ...preValue,
+  //       [name]: InputValue,
+  //     };
+  //   });
+  // };
+  // const handleSubmit = e => {
+  // e.preventDefault();
+  //   if (data.email === user.eamil && data.password === user.password) {
+  //     navigate("/dashboard");
+  //   } else {
+  //     alert("Please check email and password");
+  //   }
+  // };
   return (
     <form action="#" className="login-div" onSubmit={handleSubmit}>
       <div className="title-login">
@@ -44,22 +64,44 @@ function LoginComponent() {
             placeholder="email address"
             name="email"
             handleChange={handleChange}
+            handleBlur={handleBlur}
+            value={values.email}
             icon={<HiOutlineMail />}
             iconStyle="iconSty"
-            value={data.email}
           />
+          <p
+            style={{
+              textAlign: "start",
+              padding: "0px 0px  0px 20px ",
+              color: "red",
+              fontSize: "12px",
+            }}
+          >
+            {errors.email && touched.email ? errors.email : null}
+          </p>
         </div>
         <div className="inputStyDiv">
           <InputComponent
             icon={<HiOutlineLockClosed />}
             type="password"
-            value={data.password}
+            value={values.password}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
             name="password"
             inputId="inputTwo"
             placeholder="password"
             iconStyle="iconSty"
-            handleChange={handleChange}
           />
+          <p
+            style={{
+              textAlign: "start",
+              padding: "0px 0px  0px 20px ",
+              color: "red",
+              fontSize: "12px",
+            }}
+          >
+            {errors.password && touched.password ? errors.password : null}
+          </p>
         </div>
         <div className="forgotPass">
           <div className="checkboxStyle">
@@ -71,15 +113,15 @@ function LoginComponent() {
           </div>
         </div>
       </div>
-
       <div>
-        <input
+        <button
           type="submit"
           value="LogIn"
           className="btn-style"
           style={{ cursor: "pointer" }}
-        />
-        {/* <Button btnname="LogIn" className="btn-style" /> */}
+        >
+          Login
+        </button>
       </div>
     </form>
   );
