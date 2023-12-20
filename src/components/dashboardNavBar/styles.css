@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0.5rem;
+  border-radius: 0 1rem;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 .navLink {

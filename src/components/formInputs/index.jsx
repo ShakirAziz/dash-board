@@ -7,7 +7,7 @@ const FormInputs = ({ type, value, id, name, placeholder, max, iconUrl }) => {
         style={{
           width: "100%",
           padding: "1rem 0 1rem 3rem",
-          marginBottom: "2rem",
+          marginBottom: "1rem",
           color: "white",
           border: "1px solid addrgba(217, 217, 255, 0.48)",
           backgroundColor: "rgba(255, 255, 255, 0.00)",

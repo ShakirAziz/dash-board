@@ -3,6 +3,7 @@ import DashboardSideBar from "../../components/dashboardSideBar";
 import DashboardMainLayout from "../../components/dashboardLayout";
 import PatientManagment from "../../components/pateintManagement";
 import ClinicalManagment from "../../components/clinicalManagment";
+import { sideBartabs } from "../../components/dashboardSideBar/dashboardSideBar";
 
 const Dashboard = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -20,10 +21,12 @@ const Dashboard = () => {
       <DashboardSideBar
         toggleState={toggleState}
         setToggleState={setToggleState}
+        tabs={sideBartabs}
       />
       <div
         style={{
           width: "100%",
+          height: "100vh",
           backgroundColor: " #000000",
           padding: "1rem 2rem",
           color: "white",

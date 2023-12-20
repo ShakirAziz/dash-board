@@ -1,5 +1,5 @@
 import avatarImg from "../../assets/Ellipse 1094.png";
-import del from "../../assets/deleteIcon.png";
+import del from "../../assets/icons/deleteIcon.png";
 
 const userDataAccess = [
   {
