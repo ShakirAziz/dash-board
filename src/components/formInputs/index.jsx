@@ -24,14 +24,13 @@ const FormInputs = ({ type, value, id, name, placeholder, max, iconUrl }) => {
       <div
         style={{
           fontSize: "1.5rem",
-
           position: "absolute",
           color: "grey",
           left: "1rem",
           top: "0.7rem",
         }}
       >
-        {iconUrl}
+        {iconUrl && <span>{iconUrl}</span>}
       </div>
     </div>
   );
