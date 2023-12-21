@@ -10,6 +10,7 @@ function InputComponent({
   value,
   handleChange,
   name,
+  handleBlur,
 }) {
   return (
     <div className="input-container">
@@ -19,6 +20,7 @@ function InputComponent({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        onBlur={handleBlur}
         name={name}
       />
       <div className={iconStyle}> {icon}</div>
