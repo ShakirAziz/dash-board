@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../button/button.css";
 import "./login.css";
 import InputComponent from "../input/input";
@@ -28,29 +27,6 @@ function LoginComponent() {
       },
     });
 
-  // const [data, setData] = useState({
-  // email: "",
-  // password: "",
-  // });
-
-  // const handleChange = e => {
-  //   const InputValue = e.target.value;
-  //   const name = e.target.name;
-  //   setData(preValue => {
-  //     return {
-  //       ...preValue,
-  //       [name]: InputValue,
-  //     };
-  //   });
-  // };
-  // const handleSubmit = e => {
-  // e.preventDefault();
-  //   if (data.email === user.eamil && data.password === user.password) {
-  //     navigate("/dashboard");
-  //   } else {
-  //     alert("Please check email and password");
-  //   }
-  // };
   return (
     <form action="#" className="login-div" onSubmit={handleSubmit}>
       <div className="title-login">
